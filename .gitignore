@@ -2,3 +2,4 @@
 .next/*
 .env
 %APPDATA%
+node_modules/*

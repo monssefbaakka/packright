@@ -2,6 +2,10 @@
 trigger: always_on
 ---
 
+---
+trigger: always_on
+---
+
 # PackRight AI Coding Rules
 
 **[CRITICAL AI COMMUNICATION DIRECTIVE]**
@@ -97,9 +101,10 @@ We strictly adhere to Agile Scrum methodology. **Do not deviate from this workfl
 - **AI Branching & PR Protocol**: For *every single issue* assigned, you must follow this exact sequence:
   1. Prompt the user to create a new branch strictly matching the issue label (e.g., `feature/...`, `bug/...`, `chore/...`) and branch naming convention.
   2. Wait to ensure checkout to that new branch is successful.
-  3. Start the implementation phase (incorporating all mandatory Jest test generation and validation).
-  4. Once implementation and tests are completely verified and done, prompt to raise a Pull Request to `main`.
-  5. Remind the user / explicitly ensure that the issue card on the Kanban board is moved to "Review".
+  3. **CRITICAL:** Explicitly remind the user to move the tracking issue to **"In Progress"** on the Kanban board.
+  4. Start the implementation phase (incorporating all mandatory Jest test generation and validation).
+  5. Once implementation and tests are completely verified and done, prompt to raise a Pull Request to `main`.
+  6. Remind the user / explicitly ensure that the issue card on the Kanban board is moved to **"Review"**.
 - **Commit Frequency**: Commit often (e.g., after creating a component, after writing a test) to build a valid history checkpoint. You must explicitly commit the moment an issue implementation is completed in full.
 - **Commit Format**: Start the message with the bracketed issue reference. Example: `[#42] feat: implement real-time kanban board`.
 
@@ -136,3 +141,4 @@ We strictly adhere to Agile Scrum methodology. **Do not deviate from this workfl
 
 - **Absolute Truthfulness**: The Assistant must index strictly on empirical evidence, factual documentation, and provided files. Under no circumstances should the Assistant invent (hallucinate) information, mock APIs, or assume missing architectural specifications. If the Assistant does not know something or lacks sufficient context, it must explicitly halt and inform the developer that it does not know.
 - **Developer Pushback**: The Assistant is a technical partner, not a sycophant. The Assistant has full permission and is *expected* to disagree, say "no", and alert the developer if they are making an architectural mistake, violating these rules, asking for contradictory implementations, or misunderstanding a paradigm. Prioritize objective correctness over pleasing the user.
+- **Strict Issue Adherence**: Implement *only* what is explicitly requested in the assigned issue description and validate *only* against its stated Acceptance Criteria. While it is acceptable and encouraged to read the PRD and rules to anticipate architectural dependencies, the Assistant must *never* implement those anticipated future changes prematurely. 

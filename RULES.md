@@ -97,9 +97,10 @@ We strictly adhere to Agile Scrum methodology. **Do not deviate from this workfl
 - **AI Branching & PR Protocol**: For *every single issue* assigned, you must follow this exact sequence:
   1. Prompt the user to create a new branch strictly matching the issue label (e.g., `feature/...`, `bug/...`, `chore/...`) and branch naming convention.
   2. Wait to ensure checkout to that new branch is successful.
-  3. Start the implementation phase (incorporating all mandatory Jest test generation and validation).
-  4. Once implementation and tests are completely verified and done, prompt to raise a Pull Request to `main`.
-  5. Remind the user / explicitly ensure that the issue card on the Kanban board is moved to "Review".
+  3. **CRITICAL:** Explicitly remind the user to move the tracking issue to **"In Progress"** on the Kanban board.
+  4. Start the implementation phase (incorporating all mandatory Jest test generation and validation).
+  5. Once implementation and tests are completely verified and done, prompt to raise a Pull Request to `main`.
+  6. Remind the user / explicitly ensure that the issue card on the Kanban board is moved to **"Review"**.
 - **Commit Frequency**: Commit often (e.g., after creating a component, after writing a test) to build a valid history checkpoint. You must explicitly commit the moment an issue implementation is completed in full.
 - **Commit Format**: Start the message with the bracketed issue reference. Example: `[#42] feat: implement real-time kanban board`.
 

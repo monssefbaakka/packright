@@ -3,3 +3,5 @@
 .env
 %APPDATA%
 node_modules/*
+yarn.lock
+.ds_store
